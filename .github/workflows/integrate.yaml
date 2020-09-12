@@ -13,9 +13,9 @@ jobs:
       - name: Setup...
         uses: actions/setup-node@v1
         with: node-version:12
-        run: npm ci
-        run: npm test
-        run: npm run build
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
       - name: Hora de finalización
         id: fin
         run: echo "Hora de finalización ${{ steps.fin.outputs.time }}"
