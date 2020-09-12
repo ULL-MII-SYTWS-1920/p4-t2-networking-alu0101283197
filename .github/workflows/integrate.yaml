@@ -13,12 +13,13 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: Hora de inicio
+    - name: Obtener hora de inicio
       id: inicio
       uses: nanzm/get-time-action@v1.0
       with:
           timeZone: 8
           format: 'YYYY-MM-DD-HH-mm-ss'
+    - name: Mostrar hora de inicio
       run: echo "Hora de inicio ${{ steps.inicio.outputs.time }}"
     - name: Setup...
       uses: actions/setup-node@v1
@@ -31,6 +32,11 @@ jobs:
         npm test
       env:
         CI: true
-    - name: Hora de finalización
+    - name: Obtener hora de finalización
       id: fin
+      uses: nanzm/get-time-action@v1.0
+      with:
+          timeZone: 8
+          format: 'YYYY-MM-DD-HH-mm-ss'
+    - name: Mostrar hora de finalización
       run: echo "Hora de finalización ${{ steps.fin.outputs.time }}"
