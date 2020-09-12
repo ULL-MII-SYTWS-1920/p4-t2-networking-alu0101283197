@@ -1,24 +1,21 @@
 name: Integración continua con Node.js
 
-on: 
-  push:
-    branches: [master]
+on: push
 
 jobs:
   ci_to_master:
     runs-on: ubuntu-lastest
-    name: Github Actions
     steps:
-      - name: Hora de inicio
-      - id: inicio
-      - run: echo "Hora de inicio ${{ steps.inicio.outputs.time }}"
-      - name: Comprobando...
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-      - with: node-version:12
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
+      - name: Hora de inicio
+        id: inicio
+        run: echo "Hora de inicio ${{ steps.inicio.outputs.time }}"
+      - name: Setup...
+        uses: actions/setup-node@v1
+        with: node-version:12
+        run: npm ci
+        run: npm test
+        run: npm run build
       - name: Hora de finalización
-      - id: fin
-      - run: echo "Hora de finalización ${{ steps.fin.outputs.time }}"
+        id: fin
+        run: echo "Hora de finalización ${{ steps.fin.outputs.time }}"
