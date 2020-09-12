@@ -15,6 +15,10 @@ jobs:
     - uses: actions/checkout@v2
     - name: Hora de inicio
       id: inicio
+      uses: nanzm/get-time-action@v1.0
+      with:
+          timeZone: 8
+          format: 'YYYY-MM-DD-HH-mm-ss'
       run: echo "Hora de inicio ${{ steps.inicio.outputs.time }}"
     - name: Setup...
       uses: actions/setup-node@v1
