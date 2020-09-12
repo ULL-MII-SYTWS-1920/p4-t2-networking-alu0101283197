@@ -1,21 +1,31 @@
 name: Integración continua con Node.js
 
-on: push
+on: [push]
 
 jobs:
-  ci_to_master:
+  build:
+  
     runs-on: ubuntu-lastest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+    
     steps:
-      - name: Hora de inicio
-        id: inicio
-        run: echo "Hora de inicio ${{ steps.inicio.outputs.time }}"
-      - name: Setup...
-        uses: actions/checkout@v2
-        uses: actions/setup-node@v1
-        with: node-version:12
-        run: npm ci
-        run: npm test
-        run: npm run build
-      - name: Hora de finalización
-        id: fin
-        run: echo "Hora de finalización ${{ steps.fin.outputs.time }}"
+    - uses: actions/checkout@v2
+    - name: Hora de inicio
+      id: inicio
+      run: echo "Hora de inicio ${{ steps.inicio.outputs.time }}"
+    - name: Setup...
+      uses: actions/setup-node@v1
+      with: 
+        node-version: ${{matrix.node-version}}
+    - name: npm install, build and test
+      run: npm ci
+      run: npm run build --if-present
+      run: npm test
+      env:
+        CI: true
+    - name: Hora de finalización
+      id: fin
+      run: echo "Hora de finalización ${{ steps.fin.outputs.time }}"
