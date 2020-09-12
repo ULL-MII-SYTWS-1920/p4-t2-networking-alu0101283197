@@ -10,7 +10,8 @@ jobs:
     name: Github Actions
     steps:
       - name: Hora de inicio
-      run: echo "Hora de inicio ${{ steps.hello.outputs.time }}"
+      id: inicio
+      run: echo "Hora de inicio ${{ steps.inicio.outputs.time }}"
       - name: Comprobando...
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -20,4 +21,5 @@ jobs:
       - run: npm test
       - run: npm run build
       - name: Hora de finalización
-      run: echo "Hora de finalización ${{ steps.hello.outputs.time }}"
+      id: fin
+      run: echo "Hora de finalización ${{ steps.fin.outputs.time }}"
