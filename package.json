@@ -1,0 +1,26 @@
+{
+  "name": "p4-t2-networking-alu0101283197",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197/issues"
+  },
+  "homepage": "https://github.com/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197#readme",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "mocha": "3.4.2",
+    "net": "^1.0.2"
+  }
+}
