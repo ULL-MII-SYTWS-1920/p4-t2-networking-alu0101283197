@@ -4,7 +4,7 @@ node_js:
 cache: npm
 
 ignore:
-  - /scripts/*
+  - /chapter3/*
 
 install:
   - npm ci
