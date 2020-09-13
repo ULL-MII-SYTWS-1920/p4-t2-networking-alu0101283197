@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+- 11.6.0
+cache: npm
+
+install:
+  - npm ci
+
+script:
+  - npm test
+  - npm run build --if-present
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
+    
