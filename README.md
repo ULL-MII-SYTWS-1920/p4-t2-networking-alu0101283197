@@ -40,3 +40,9 @@ La variable Steps nos indica los pasos a seguir. Se definen en el, las acciones 
 El resultado del push sería el siguiente:
 ![a4](img/a4.png)
 
+
+### Travis CI
+
+
+
+[![Build Status](https://travis-ci.com/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197.svg?branch=master)](https://travis-ci.com/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197)

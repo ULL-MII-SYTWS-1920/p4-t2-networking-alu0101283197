@@ -4,7 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
   },
   "repository": {
     "type": "git",
@@ -15,12 +23,22 @@
   "bugs": {
     "url": "https://github.com/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197/issues"
   },
-  "homepage": "https://github.com/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197#readme",
+  "homepage": "https://ull-mii-sytws-1920.github.io/p4-t2-networking-alu0101283197",
   "devDependencies": {
     "fs": "0.0.1-security",
     "gulp": "^4.0.2",
     "gulp-sass": "^4.1.0",
     "mocha": "3.4.2",
-    "net": "^1.0.2"
-  }
+    "net": "^1.0.2",
+    "gh-pages": "^2.0.1",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "react-scripts": "2.1.3"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

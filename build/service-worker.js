@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/p4-t2-networking-alu0101283197/precache-manifest.75da3c860d2c343820f611680bfa9c4d.js"
+  "/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197/precache-manifest.ad1a5d9a8c9acfb0257b0c5f5c1403ca.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/p4-t2-networking-alu0101283197/index.html", {
+workbox.routing.registerNavigationRoute("/ULL-MII-SYTWS-1920/p4-t2-networking-alu0101283197/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
