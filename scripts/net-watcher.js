@@ -1,4 +1,6 @@
 'use strict'; 
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 const fs = require('fs'); 
 const net = require('net'); 
 const filename = "target.txt"; 

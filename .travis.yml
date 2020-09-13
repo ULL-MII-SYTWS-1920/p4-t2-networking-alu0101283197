@@ -3,6 +3,9 @@ node_js:
 - 11.6.0
 cache: npm
 
+ignore:
+  - /scripts/*
+
 install:
   - npm ci
 
