@@ -9,7 +9,7 @@ class App extends Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
-            My first github project with travis!
+            Proyecto de GithubActions y TravisCI
           </p>
           <a
             className="App-link"
